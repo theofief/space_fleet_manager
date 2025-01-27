@@ -1,0 +1,24 @@
+{
+    "settings": {
+        "auto_save_on_exit": true,
+        "auto_load": true
+    },
+    "fleet_name": "Test",
+    "spaceships": [
+        {
+            "name": "One",
+            "type": "transporter",
+            "condition": "operational",
+            "crew": [
+                {
+                    "first_name": "Jean",
+                    "last_name": "Pierre",
+                    "gender": "feafnieo",
+                    "age": "43",
+                    "role": "engineer",
+                    "experience": 5
+                }
+            ]
+        }
+    ]
+}
