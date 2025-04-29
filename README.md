@@ -1,149 +1,97 @@
-**Let’s introduce Space Fleet Manager!**
+# 🚀 Space Fleet Manager – Text-Based Fleet Management Game
 
-**Introduction**
+**Space Fleet Manager** est un jeu en ligne de commande dans lequel vous incarnez le gestionnaire d'une flotte spatiale. Recrutez des membres d’équipage, maintenez vos vaisseaux en bon état et gérez des événements aléatoires pour assurer la survie de votre flotte.
 
-In this game, you take on the role of a space fleet manager. You need to recruit crew members, maintain your spaceships in good condition, and handle various random events to keep your fleet operational.
+---
 
-**Required Libraries**
+## 📦 Bibliothèques requises
 
-*Standard Modules*
+### 🔹 Modules standards (inclus avec Python)
 
-These libraries are included by default with Python:
+- `json` : lecture et écriture des données au format JSON  
+- `random` : génération d'événements aléatoires  
+- `atexit` : exécution d'une fonction à la fermeture du programme
 
-•  **json**: for reading and writing data in JSON format.
+### 🔹 Fichiers personnalisés (à placer dans le même dossier que le script principal)
 
-•  **random**: for generating random events.
+- `fleet.py` : gestion de la flotte  
+- `spaceship.py` : caractéristiques des vaisseaux  
+- `crew.py` : gestion de l'équipage  
+- `Operator.py` : gestion des opérateurs spécialisés  
+- `mentalist.py` : personnages dotés de pouvoirs spéciaux  
+- `member.py` : membres d’équipage de base
 
-•  **atexit**: for running a function before the program closes.
+---
 
-**Custom Files**
+## 🛠️ Installation & Lancement
 
-The following files must be in the same directory as the main script:
+1. **Installer Python** :  
+   Téléchargez [Python 3.10 ou supérieur](https://www.python.org/downloads/)
 
-•  **fleet.py**: defines fleet management functionalities.
+2. **Organisation des fichiers** :  
+   Placez tous les fichiers `.py` dans le même dossier
 
-•  **spaceship.py**: contains spaceship characteristics.
+3. **Initialisation** :  
+   Lancez le script principal une première fois pour générer le fichier `fleet.json` (sauvegarde automatique des données)
 
-•  **crew.py**: manages the crew.
+---
 
-•  **Operator.py**: for specialized operators.
+## 🎮 Comment jouer
 
-•  **mentalist.py**: for characters with special abilities.
+### 1. Démarrage
 
-•  **member.py**: for basic crew members.
+- Si l'option **Auto Load** est activée, les données sont automatiquement chargées  
+- Sinon, le jeu démarre avec une flotte vide
 
-**Installation and Setup**
+### 2. Menus principaux
 
-1.  **Install Python**: Download and install [Python 3.10 or higher](https://www.python.org/downloads/).
+- 🛸 **Gestion de flotte** : ajouter, modifier ou supprimer des vaisseaux  
+- 👨‍🚀 **Gestion de l’équipage** : assigner des rôles, faire évoluer les membres  
+- ⚙️ **Paramètres** : activer/désactiver l'auto-save, modifier les options  
+- 💾 **Sauvegarde & chargement** : automatique à la fermeture si activée  
+- ❌ **Quitter** : fermeture du jeu (avec sauvegarde si activée)
 
-2.  **File Organization**:
+### 3. Navigation
 
-•  Place all files (fleet.py, spaceship.py, etc.) in the same directory as the main script.
+- Système de menus numérotés  
+- Saisissez simplement le numéro correspondant à l'action souhaitée
 
-3.  **Data Initialization**:
+---
 
-•  Run the script once to create a fleet.json file. This file will contain the game settings.
+## ✨ Fonctionnalités principales
 
-**How to Play**
+### ✅ Initialisation automatique
 
-**1. Starting the Game**
+- Le fichier `fleet.json` est généré si absent  
+- Paramètres par défaut : auto-save et auto-load désactivés (modifiable)
 
-•  When you start the game, the program will automatically load saved data if the “Auto Load” option is enabled.
+### 🛸 Gestion de flotte
 
-•  Otherwise, the game will start with an empty fleet.
+- Ajouter des vaisseaux (nom, type, état)  
+- Modifier ou supprimer des vaisseaux  
+- Afficher les détails de la flotte
 
-**2. Main Menus**
-•  Allow you to manage all the fleet
-•  Save your game
-•  Access to settings
-•  Quit (and auto save on exit if enabled)
-  
-The game is organized into menus:
+### 👨‍🚀 Gestion de l’équipage
 
-•  **Fleet Management**:
+- Recruter des membres avec des rôles spécifiques (pilote, technicien, mentaliste, etc.)  
+- Faire évoluer leurs compétences  
+- Utiliser des compétences spéciales
 
-•  Add, modify, or remove spaceships.
+### 🌌 Événements aléatoires
 
-•  Display detailed fleet information.
+- Des événements inattendus (pannes, destructions, etc.) affectent la flotte  
+- Augmente la difficulté et le réalisme de la gestion
 
-•  **Spaceship Management**:
+---
 
-•  Add or remove crew members.
+## 🧪 Exemple de session
 
-•  Modify the spaceship’s status (operational, damaged, destroyed).
+1. Lancer le jeu  
+2. Accéder au menu principal  
+3. Ajouter un nouveau vaisseau  
+4. Recruter un équipage  
+5. Gérer les événements aléatoires et maintenir la flotte en état
 
-•  Run readiness checks.
+---
 
-•  **Crew Management**:
-
-•  Assign roles or increase crew members’ experience.
-
-•  Perform actions specific to their roles.
-
-•  **Random Events**:
-
-•  Unexpected events may affect your spaceships.
-
-**3. Commands**
-
-•  The menus display numbered options.
-
-•  Simply enter the corresponding number for your choice.
-
-**4. Saving and Loading**
-
-•  Game data is automatically saved upon closing  (if enabled in settings).
-
-•  You can load previous data on startup.
-
-**Main Features**
-
-**Initialization**
-
-•  The JSON file is created automatically if absent.
-
-•  Default settings include:
-
-•  Auto-save (if enabled in settings).
-
-•  Auto-load data (if enabled in settings).
-
-**Fleet Management**
-
-•  Add spaceships with custom names, types, and conditions.
-
-•  Remove spaceships or modify their characteristics.
-
-**Crew Management**
-
-•  Add crew members with specific roles (pilot, technician, mentalist, etc.).
-
-•  Gain experience or use special abilities to improve performance.
-
-**Random Events**
-
-•  Spaceships may be randomly damaged or destroyed.
-
-•  These events add challenge to managing your fleet.
-
-**Main Commands**  
-
-Here are some basic commands you can use:
-
-•  **Show Settings**: View and modify game options.
-
-•  **Add a Spaceship**: Enhance your fleet by adding spaceships.
-
-•  **Manage a Crew Member**: Customize the roles and skills of your crew.
-
-**Example Session**
-
-1.  Start the game.
-
-2.  Access the main menu.
-
-3.  Add a new spaceship to your fleet.
-
-4.  Recruit a crew for the spaceship.
-
-5.  Manage random events to ensure your fleet’s survival.
+*Contributions, retours ou améliorations bienvenus !*
